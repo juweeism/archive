@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import IMG_SPOTIFY from "../images/spotify.png"
+import IMG_BJORK from "../images/bjork.png"
+import IMG_HEIGHT from "../images/height.jpg"
+import IMG_1BILLION from "../images/1billionviews.png"
+import IMG_COMICSANS from "../images/comic-sans.png"
+import IMG_TWILIGHT from "../images/twilight.png"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <title>archive | screenshots</title>
+	</head>
+	<body>
+    	<div class="max-w-[700px] p-6 md:p-12 mx-auto">
+            <ul class="view flex flex-col gap-6">
+                <li>
+                    <Image src={IMG_HEIGHT} alt="my height is not your culture"/>
+                </li>
+                <li>
+                    <Image src={IMG_1BILLION} alt="i want it 1 billion views"/>
+                </li>
+                <li>
+                    <Image src={IMG_TWILIGHT} alt="need me an edward fr"/>
+                </li>
+                <li>
+                    <Image src={IMG_COMICSANS} alt="comic sans accessibility"/>
+                </li>
+                <li>
+                    <Image src={IMG_BJORK} alt="bjork is a haskell girl"/>
+                </li>
+            </ul>
+    	</div>
+	</body>
+</html>
+
+<style>
+    body, html {
+        background: black;
+    }
+
+    .view li {
+        margin: 3rem 0;
+        object-fit: contain;
+        padding: 1rem;
+    }
+
+    img {
+        max-height: 18rem;
+        object-fit: contain;
+    }
+</style>
